@@ -1,0 +1,75 @@
+version: '3'
+services:
+  php:
+    # image: 'php:7.4-fpm'
+    build:
+      context: ./config/php
+      dockerfile: php.Dockerfile
+    container_name: ${APP_NAME:?err}-php
+    environment:
+      - 'TZ=${WORKSPACE_TIMEZONE}'
+      - 'DBUP=${MARIADB_DATABASE}'
+      - 'USERDB=${MARIADB_USER}'
+      - 'UPWDB=${MARIADB_PASSWORD}'
+    volumes:
+      - ./config/php/php.ini:/usr/local/etc/php/php.ini
+      - ./app:/var/www/html
+    depends_on:
+      - mariadb
+
+  nginx:
+    #image: nginx:latest
+    build:
+      context: ./config/nginx
+      dockerfile: nginx.Dockerfile
+    container_name: ${APP_NAME:?err}-nginx
+    restart: 'on-failure'
+    ports:
+      - '8081:80'
+      - '443:443'
+    links:
+      - php
+    environment:
+      - 'TZ=${WORKSPACE_TIMEZONE}'
+    volumes:
+      - ./app:/var/www/html
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/nginx/sites:/etc/nginx/conf.d
+
+  mariadb:
+    # image: mariadb:latest
+    build:
+      context: ./config/mariadb
+      dockerfile: mariadb.Dockerfile
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    container_name: ${APP_NAME:?err}-mariadb
+    # restart: 'on-failure'
+    environment:
+      - 'TZ=${WORKSPACE_TIMEZONE}'
+      - 'DBUP=${MARIADB_DATABASE}'
+      - 'USERDB=${MARIADB_USER}'
+      - 'UPWDB=${MARIADB_PASSWORD}'
+      - 'MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}'
+    volumes:
+      - ${DATA_PATH_HOST}/setup.sh:/docker-entrypoint-initdb.d/setup.sh
+      - ${DATA_PATH_HOST}/mariadb:/var/lib/mysql
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MARIADB_ROOT_PASSWORD
+      interval: 5s
+      retries: 10
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: ${APP_NAME:?err}-phpmyadm
+    ports:
+      - ${PMA_PPORT}:80
+    links:
+      - mariadb
+      - php
+    environment:
+      PMA_HOST: mariadb
+    depends_on:
+      - mariadb
