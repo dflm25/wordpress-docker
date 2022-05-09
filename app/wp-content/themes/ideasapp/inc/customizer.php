@@ -102,7 +102,7 @@ add_action('customize_register', function ( $wp_customize ) {
         $wp_customize,
         'photo',
         array(
-            'label'      => __( 'Upload a banner (421 * 611)', 'theme_name' ),
+            'label'      => __( 'Upload a photo (421 * 611)', 'theme_name' ),
             'section'    => 'landing_page_home',
             'settings'   => 'landing_photo',
             'context'    => 'your_setting_context'

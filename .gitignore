@@ -1,0 +1,6 @@
+app/logs/*
+data/mariadb/
+app/wp-content/uploads/*
+
+.env
+documents.txt

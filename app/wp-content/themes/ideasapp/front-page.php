@@ -69,9 +69,9 @@
         <div class="about-2-img text-right">
           <div id="wrappera">
             <img
-              src="<?php echo get_template_directory_uri(); ?>/assets/img/me.jpg"
-              alt="imgges"
-              data-speed="0.01"
+              src="<?php echo get_theme_mod('landing_photo', get_template_directory_uri(). "/assets/img/at.png"); ?>"
+              alt="Profile"
+              data-speed="0.003"
               data-revert="true"
             /> 
           </div>

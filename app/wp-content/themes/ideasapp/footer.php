@@ -67,24 +67,27 @@
               <div class="contact-location">
                 <ul>
                   <li>
-                    <a href="tel:01994992011">0098 52 56985</a>
+                    <a href="tel:<?php echo get_theme_mod('landing_phone', '+57 ') ?>">
+                        <?php echo get_theme_mod('landing_phone', '+57 ') ?>
+                    </a>
                   </li>
                   <li>
                     <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
-                  </li>
-                  <li>
-                    32 Choto Mirzapur Road, 1st Floor Peace Place, Khulna 9100,
-                    Bangladesh
                   </li>
                 </ul>
               </div>
               <div class="soical-icon-contact">
                 <ul>
                   <li>
-                    <a href="#!"><i class="fab fa-instagram instagram"></i></a>
-                    <a href="#!"><i class="fab fa-twitter twitter"></i></a>
-                    <a href="#!"><i class="fab fa-behance behance"></i></a>
-                    <a href="#!"><i class="fab fa-dribbble dribbble"></i></a>
+                    <?php if (get_theme_mod('landing_facebook')) { ?>
+                        <a href="<?php echo get_theme_mod('landing_facebook') ?>" target="_blank"><i class="fab fa-facebook instagram"></i></a>
+                    <?php } ?>
+                    <?php if (get_theme_mod('landing_twitter')) { ?>
+                        <a href="<?php echo get_theme_mod('landing_twitter')?>" target="_blank"><i class="fab fa-twitter instagram"></i></a>
+                    <?php } ?>
+                    <?php if (get_theme_mod('landing_linkedin')) { ?>
+                        <a href="<?php echo get_theme_mod('landing_linkedin')?>" target="_blank"><i class="fab fa-linkedin instagram"></i></a>
+                    <?php } ?>
                   </li>
                 </ul>
               </div>
