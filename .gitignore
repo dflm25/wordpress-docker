@@ -1,9 +1,0 @@
-app/logs/access.log
-app/logs/default_access.log
-app/logs/default_error.log
-app/logs/error.log
-data/mariadb/
-
-.env
-
-documents.txt
