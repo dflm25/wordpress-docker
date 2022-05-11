@@ -1,6 +1,8 @@
 app/logs/*
 data/mariadb/
 app/wp-content/uploads/*
+app/wp-content/plugins/ideasapp/node_modules
+app/wp-content/plugins/ideasapp/build
 
 .env
 documents.txt
