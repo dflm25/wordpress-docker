@@ -13,10 +13,11 @@ const RegisterForm = () => {
     handleSubmit,
     watch,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = async (data) => {
-    setLoading(true);
+    // setLoading(true);
     const response = await fetch(`${HOST_API}contact-form`, {
       method: 'POST',
       body: JSON.stringify(data),
@@ -25,9 +26,9 @@ const RegisterForm = () => {
       },
     });
     setLoading(false);
-    console.log('Response: ', response.JSON);
 
     swal('Great!', 'Form sent successfully!', 'success');
+    reset();
   };
 
   return (
