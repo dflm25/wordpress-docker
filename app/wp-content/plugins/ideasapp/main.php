@@ -1,8 +1,8 @@
 <?php
 /*
-    Plugin Name: Ideas Contact Form
+    Plugin Name: Ideas theme plugins
     Plugin URI: https://www.ideasapp.co
-    Description: Contact Form
+    Description: All plugins for theme ideas
     Version: 0.01
     Author: Daniel Felipe Lucumi Marin
     Author URI: https://www.ideasapp.co
@@ -10,4 +10,8 @@
     Text domain: my-contact-form
 */
 
+// Shortcodes
 require_once plugin_dir_path(__FILE__)."/shorcodes/formRegister.php";
+
+// API
+require_once plugin_dir_path(__FILE__)."/api/contactFormApi.php";

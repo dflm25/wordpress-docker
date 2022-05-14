@@ -1,7 +1,7 @@
 <?php
 
 function ideas_add_register_form () {
-    wp_enqueue_script("registerForm", plugins_url("/../build/src/registerForm.bundle.js",  __FILE__ ));
+    wp_enqueue_script("contact-form", plugins_url("/../build/src/registerForm.js",  __FILE__ ));
 
     return "<div class=\"contact-form-area\" id=\"registerForm\"></div>";
 }
