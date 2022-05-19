@@ -2,6 +2,7 @@
 require ("constants.php");
 
 require (THEME_PATH."/inc/customizer.php");
+require (THEME_PATH."/inc/pattern.php");
 require (THEME_PATH."/cpt/index.php");
 require (THEME_PATH."/metabox/teachers.php");
 require (THEME_PATH."/metabox/banners.php");
@@ -47,8 +48,8 @@ add_action("wp_enqueue_scripts", function() {
     wp_enqueue_script("carousel", PATH_THEME."/assets/js/owl.carousel.min.js");
     wp_enqueue_script("magnific", PATH_THEME."/assets/js/jquery.magnific-popup.min.js");
     wp_enqueue_script("counterup", PATH_THEME."/assets/js/jquery.counterup.min.js");
-    wp_enqueue_script("waypoints", PATH_THEME."/assets/js/assets/js/waypoints.min.js");
-    wp_enqueue_script("wow", PATH_THEME."/assets/js/assets/js/wow.min.js");
+    wp_enqueue_script("waypoints", PATH_THEME."/assets/js/waypoints.min.js");
+    wp_enqueue_script("wow", PATH_THEME."/assets/js/wow.min.js");
     wp_enqueue_script("isotope", PATH_THEME."/assets/js/isotope.pkgd.min.js");
     wp_enqueue_script("imagesloaded", PATH_THEME."/assets/js/imagesloaded.pkgd.min.js");
     wp_enqueue_script("back-menus", PATH_THEME."/assets/js/back-menus.js");

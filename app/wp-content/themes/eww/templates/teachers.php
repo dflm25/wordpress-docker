@@ -1,7 +1,7 @@
 <div class="instructor__area pt-95 pb-95 text-center">
     <div class="container instructor__width">
         <div class="row">
-            <div class="col-xxl-7 offset-xxl-2 col-xl-7 offset-xl-2 col-lg-7 offset-lg-2">
+            <div class="col-md-12">
                 <div class="instructor__title-content text-center pb-20">
                     <span class="instructor__pre-title">Teachers</span>
                     <h2 class="instructor__title">Conoce nuestro staff</h2>
@@ -12,7 +12,7 @@
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="instructor__content">
                     <div class="instructor__content-1">
-                        <img src="assets/images/instructor/01.jpg" alt="course instructor picture">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instructor/01.jpg" alt="course instructor picture">
                     </div>
                     <div class="instructor__content-2">
                         <h4>

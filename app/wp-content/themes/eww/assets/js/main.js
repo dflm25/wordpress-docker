@@ -90,29 +90,7 @@
     $('#menu-btn').on('click', function(e) {
         $(this).toggleClass("back__close");
         e.preventDefault();
-    });
-
-    // Home Slider Part
-    if ($('.home-slider-part').length) {
-        $('.home-slider-part').owlCarousel({
-            loop:true,
-            items:1,
-            margin:0,
-            autoplay:false,
-            slideSpeed : 800,
-            nav:true,
-            dots:true,
-            responsive:{
-                0:{
-                    dots:false,
-                    nav:false,
-                },
-                768:{
-                    dots:true,
-                },
-            }
-        })
-    }
+    });    
 
     // Client Slider Part
     if ($('.client-slider').length) {
@@ -350,3 +328,26 @@
     });
 
 })(jQuery);
+
+$(function () {
+    if ($('.home-slider-part').length) {
+        $('.home-slider-part').owlCarousel({
+            loop:true,
+            items:1,
+            margin:0,
+            autoplay:false,
+            slideSpeed : 800,
+            nav:true,
+            dots:true,
+            responsive:{
+                0:{
+                    dots:false,
+                    nav:false,
+                },
+                768:{
+                    dots:true,
+                },
+            }
+        })
+    }
+})

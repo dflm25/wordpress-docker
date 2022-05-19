@@ -4,15 +4,15 @@
             <div class="col-lg-5">
                 <div class="back__title__section text-left">
                     <h6 class="back__subtitle">Online Course</h6>
-                    <h2 class="back__tittle"> Find The Right <br> Online Course for you </h2>
+                    <h2 class="back__tittle"> Nuestros programas </h2>
                 </div>
             </div>
             <div class="col-lg-7 text-right">
                 <div class="back-filter">
-                    <button class="active" data-filter="*">See All</button>
-                    <button data-filter=".filter1">Trending</button>
-                    <button data-filter=".filter2">Featured</button>
-                    <button data-filter=".filter3">Popularity</button>
+                    <button class="active" data-filter="*">Ver todos</button>
+                    <button data-filter=".filter1">Basico</button>
+                    <button data-filter=".filter2">Intermedio</button>
+                    <button data-filter=".filter3">Avanzado</button>
                 </div>
             </div>
         </div>                       
@@ -21,7 +21,7 @@
             <div class="single-studies col-lg-6 grid-item filter2 filter1">
                 <div class="inner-course">
                     <div class="case-img">
-                        <img src="assets/images/course-filter/1.jpg" alt="Course Image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course-filter/1.jpg" alt="Course Image">
                     </div>
                     <div class="case-content">
                         <ul class="meta-course">
@@ -42,7 +42,7 @@
             <div class="single-studies col-lg-6 grid-item filter3 filter1">
                 <div class="inner-course">
                     <div class="case-img">
-                        <img src="assets/images/course-filter/2.jpg" alt="Course Image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course-filter/2.jpg" alt="Course Image">
                     </div>
                     <div class="case-content">
                         <ul class="meta-course">
@@ -51,7 +51,7 @@
                         </ul>
                         <h4 class="case-title"> <a href="#">Customer-centric Info <br> Tech Strategies.</a></h4>
                         <div class="back__user">
-                            <img src="assets/images/course/small-image/2.png" alt="user"> Hans Down
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course/small-image/2.png" alt="user"> Hans Down
                         </div>
                         <ul class="back-ratings">
                             <li>$34.00</li>
@@ -63,7 +63,7 @@
             <div class="single-studies col-lg-6 grid-item filter3 filter2">
                 <div class="inner-course">
                     <div class="case-img">
-                        <img src="assets/images/course-filter/3.jpg" alt="Course Image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course-filter/3.jpg" alt="Course Image">
                     </div>
                     <div class="case-content">
                         <ul class="meta-course">
@@ -72,7 +72,7 @@
                         </ul>
                         <h4 class="case-title"> <a href="#">Open Programming <br> Courses for Everyone.</a></h4>
                         <div class="back__user">
-                            <img src="assets/images/course/small-image/2.png" alt="user"> Fig Nelson
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course/small-image/2.png" alt="user"> Fig Nelson
                         </div>
                         <ul class="back-ratings">
                             <li>$34.00</li>
@@ -84,7 +84,7 @@
             <div class="single-studies col-lg-6 grid-item filter2 filter1">
                 <div class="inner-course">
                     <div class="case-img">
-                        <img src="assets/images/course-filter/4.jpg" alt="Course Image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course-filter/4.jpg" alt="Course Image">
                     </div>
                     <div class="case-content">
                         <ul class="meta-course">
@@ -93,7 +93,7 @@
                         </ul>
                         <h4 class="case-title"> <a href="#">Academic Listening and <br> Note-taking</a></h4>
                         <div class="back__user">
-                            <img src="assets/images/course/small-image/4.png" alt="user"> Eric Widget
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course/small-image/4.png" alt="user"> Eric Widget
                         </div>
                         <ul class="back-ratings">
                             <li>$45.00</li>
