@@ -26,7 +26,7 @@ define( 'DB_NAME', 'sites' );
 define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'Lae01.' );
+define( 'DB_PASSWORD', 'secret' );
 
 /** Database hostname */
 define( 'DB_HOST', 'mariadb' );
